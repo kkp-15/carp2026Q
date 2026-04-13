@@ -690,22 +690,22 @@ gtag('config', 'G-2LM85GJN0L');
   .roster-section {
     margin-top: 48px;
     padding: 28px 20px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: #fff;
+    border: 1px solid #e0e0e0;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   }
   .roster-title {
     font-size: 16px;
     font-weight: 900;
-    color: #FFD700;
+    color: #c0392b;
     text-align: center;
     margin-bottom: 6px;
     letter-spacing: 1px;
   }
   .roster-sub {
     font-size: 12px;
-    color: rgba(255,255,255,0.5);
+    color: #999;
     text-align: center;
     margin-bottom: 18px;
   }
@@ -719,9 +719,9 @@ gtag('config', 'G-2LM85GJN0L');
   .roster-filter button {
     padding: 5px 14px;
     border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.15);
-    background: rgba(255,255,255,0.06);
-    color: rgba(255,255,255,0.7);
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    color: #666;
     font-size: 11px;
     font-weight: 700;
     font-family: inherit;
@@ -730,9 +730,9 @@ gtag('config', 'G-2LM85GJN0L');
   }
   .roster-filter button:hover,
   .roster-filter button.active {
-    background: rgba(255,215,0,0.15);
-    border-color: rgba(255,215,0,0.4);
-    color: #FFD700;
+    background: #fdf0e0;
+    border-color: #c0392b;
+    color: #c0392b;
   }
   .roster-grid {
     display: grid;
@@ -744,30 +744,30 @@ gtag('config', 'G-2LM85GJN0L');
     align-items: center;
     gap: 8px;
     padding: 8px 10px;
-    background: rgba(255,255,255,0.04);
+    background: #fff;
     border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid #eee;
     transition: background 0.2s;
   }
   .roster-item:hover {
-    background: rgba(255,255,255,0.08);
+    background: #f0f0f0;
   }
   .roster-no {
     font-family: "Oswald", sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: #FFD700;
+    color: #c0392b;
     min-width: 28px;
     text-align: right;
   }
   .roster-name {
     font-size: 12px;
     font-weight: 700;
-    color: rgba(255,255,255,0.85);
+    color: #333;
   }
   .roster-pos-label {
     font-size: 9px;
-    color: rgba(255,255,255,0.35);
+    color: #aaa;
   }
   @media (max-width: 480px) {
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
@@ -907,10 +907,10 @@ gtag('config', 'G-2LM85GJN0L');
 
 <!-- ===== ROSTER ===== -->
 <div class="roster-section">
-  <p class="roster-title">広島東洋カープ 背番号一覧 2026</p>
+  <p class="roster-title" onclick="var g=document.getElementById('roster-grid');var f=document.getElementById('roster-filter');var open=g.style.display!=='none';g.style.display=open?'none':'grid';f.style.display=open?'none':'flex';this.querySelector('.toggle-icon').textContent=open?'▶':'▼';" style="cursor:pointer;"><span class="toggle-icon">▶</span> 広島東洋カープ 背番号一覧 2026</p>
   <p class="roster-sub">支配下登録選手の背番号・ポジション一覧</p>
-  <div class="roster-filter" id="roster-filter"></div>
-  <div class="roster-grid" id="roster-grid"></div>
+  <div class="roster-filter" id="roster-filter" style="display:none;"></div>
+  <div class="roster-grid" id="roster-grid" style="display:none;"></div>
 </div>
 </main>
 
